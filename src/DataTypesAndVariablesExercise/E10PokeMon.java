@@ -41,18 +41,23 @@ public class E10PokeMon {
         //•	On the first line print what has remained of N, after subtracting from it.
         //•	On the second line print the count of targets, you’ve managed to poke.
 
-        int N = Integer.parseInt (scanner.nextLine());
-        int M = Integer.parseInt (scanner.nextLine());
-        int Y = Integer.parseInt (scanner.nextLine());
+        int N = Integer.parseInt(scanner.nextLine());
+        int M = Integer.parseInt(scanner.nextLine());
+        int Y = Integer.parseInt(scanner.nextLine());
 
         int originalValueOfN = N;
         int pokedTargets = 0;
 
-        while (N>=M) {
-            N-=M;
+        double half = N / 2.0;
+
+        while (N >= M) {
+            N -= M;
             pokedTargets++;
-            if (N == originalValueOfN /2) {
-                N /= Y;
+            if (N == half) {
+                if (Y != 0) {
+
+                    N /= Y;
+                }
             }
         }
 
