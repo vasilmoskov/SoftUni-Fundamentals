@@ -1,5 +1,6 @@
 package ArraysLab;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class L07CondenseArrayToNumber {
@@ -15,14 +16,20 @@ public class L07CondenseArrayToNumber {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = Integer.parseInt(numbersAsString[i]);
 
+        }
+
+        while (numbers.length>1) {
             int [] condensed = new int[numbers.length-1];
-            condensed [i] = numbers [i] + numbers [i+1];
-            numbers [i] = condensed [i];
+            for (int i = 0; i < condensed.length; i++) {
+                condensed [i] = numbers[i] + numbers [i+1];
+            }
+            numbers = condensed;
+
         }
 
 
-
-
-        System.out.println(sum);
+        for (int number : numbers) {
+            System.out.println(number);
+        }
     }
 }
