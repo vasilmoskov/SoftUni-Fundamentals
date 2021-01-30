@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class ME03RecursiveFibonacci {
     public static void main(String[] args) {
 
-        // 85 /100 - Test #6 (Runtime error)
-
         long [] numbers = new long[50];
 
         numbers [0] = 1;
@@ -20,7 +18,7 @@ public class ME03RecursiveFibonacci {
         int n = Integer.parseInt (scanner.nextLine());
 
         if (n==0) {
-            System.out.println(1);
+            System.out.println(0);
         } else {
             System.out.println(numbers[n - 1]);
         }
