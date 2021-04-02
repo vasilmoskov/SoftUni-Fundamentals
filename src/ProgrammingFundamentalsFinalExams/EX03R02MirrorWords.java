@@ -12,7 +12,7 @@ public class EX03R02MirrorWords {
 
         Map<String, String> mirrorWords = new LinkedHashMap<>();
 
-        String regex = "([@#])(?<wordOne>[A-Za-z]{2,})\\1([@#])(?<wordTwo>[A-Za-z]{2,})\\1";
+        String regex = "([@#])(?<wordOne>[A-Za-z]{3,})\\1\\1(?<wordTwo>[A-Za-z]{3,})\\1";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
 
